@@ -48,12 +48,125 @@ header{
 .menu a:hover, 
 .show-menu:hover, 
 .hide-menu:hover{
-  color: #6cc091;
+  color: #258750;
 }
 
 #check{
   display: none;
 }
+
+/* BANNER */
+
+#banner{
+  padding: 0 50px;
+  background-image: url(./assets/banner_4.jpg);
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+}
+
+#selector::before{
+  content: '';
+  background: rgba(77, 77, 92, 0.6);
+  position: absolute;
+  width: 100%;
+  height: 50vhvh;
+  left: 0;
+}
+
+.banner-container{
+  text-transform: uppercase;
+}
+
+.banner-container{
+  position: relative;
+  color: #fff;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.banner-container h3{
+  font-size: 50px;
+  font-weight: 600;
+  padding: 10px 0;
+}
+
+.banner-container h2{
+  font-size: 20px;
+  font-weight: 200;
+  border-right: 4px solid;
+  width: 19ch;
+  white-space: nowrap;
+  animation: typing 2s steps(19), blink .5s infinite step-end alternate;
+  overflow: hidden;
+}
+
+@keyframes typing {
+from { width: 0}
+}
+
+@keyframes blink {
+ 50% { border-color: transparent}
+}
+
+.about-me-button{
+  text-decoration: none;
+  border: 3px solid black;
+  color: #fff;
+  padding: 15px 10px;
+  margin-right: 0px;
+  align-self: baseline;
+  margin-top: 20px;
+  transition: all 0.8s;
+}
+
+.about-me-button:hover{
+  background: #6cc091;
+}
+
+/* AVATAR */
+
+#avatar{
+  padding: 15px 30px ;
+  background: #d1dede;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+  place-items: center;
+  column-gap: 2em;
+  row-gap: 2em;
+
+}
+
+#avatar img{
+  width: 250px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.9)
+}
+
+/* SKILLS */
+
+#skills{
+  background: #9590a8;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250, 1fr));
+  column-gap: 1em;
+  row-gap: 1em;
+  justify-content: center;
+  align-items: center;
+}
+
+#skills h2{
+  text-transform: uppercase;
+}
+
+.icon{
+  width: 120px;
+  height: 80;
+}
+
 
 /*RESPONSIVE*/
 @media(max-width: 768px){
