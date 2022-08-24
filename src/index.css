@@ -18,10 +18,8 @@ header{
   align-items: center;
 }
 
-.logo{
-  text-transform: uppercase;
-  color: #6cc091;
-  font-weight: 200;
+.logo {
+  width: 100px;
 }
 
 .menu a{
