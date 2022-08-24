@@ -19,14 +19,14 @@ header{
   align-items: center;
 }
 
-.logo {
+.logo{
   width: 80px;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 }
 
-@-webkit-keyframes logo-buzz {
+@-webkit-keyframes logo-buzz{
   50% {
     -webkit-transform: translateX(3px) rotate(2deg);
     transform: translateX(3px) rotate(2deg);
@@ -36,7 +36,7 @@ header{
     transform: translateX(-3px) rotate(-2deg);
   }
 }
-@keyframes logo-buzz {
+@keyframes logo-buzz{
   50% {
     -webkit-transform: translateX(3px) rotate(2deg);
     transform: translateX(3px) rotate(2deg);
@@ -47,7 +47,7 @@ header{
   }
 }
 
-.logo:hover {
+.logo:hover{
   cursor: pointer;
   -webkit-animation-name: logo-buzz;
   animation-name: logo-buzz;
@@ -131,11 +131,11 @@ header{
   overflow: hidden;
 }
 
-@keyframes typing {
+@keyframes typing{
 from { width: 0}
 }
 
-@keyframes blink {
+@keyframes blink{
  50% { border-color: transparent}
 }
 
@@ -269,7 +269,7 @@ from { width: 0}
   text-transform: uppercase;
 }
 
-.form-input {
+.form-input{
   padding: 10px 5px;
   outline: none;
   border: 2px solid #bfa992;
@@ -310,7 +310,7 @@ from { width: 0}
     padding: 20px;
   }
 
-  .hide-menu {
+  .hide-menu{
     position: absolute;
     top: 40px;
     right: 40px;
