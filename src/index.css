@@ -4,26 +4,63 @@
   margin: 0;
   padding: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
 }
 
 /* HEADER */
 
 header{
   height: 100px;
-  background: #4d4d5c;
+  background: #91746b;
   padding: 0 50px;
-  color: #fff;
+  color: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .logo {
-  width: 100px;
+  width: 80px;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+@-webkit-keyframes logo-buzz {
+  50% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  100% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+}
+@keyframes logo-buzz {
+  50% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  100% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+}
+
+.logo:hover {
+  cursor: pointer;
+  -webkit-animation-name: logo-buzz;
+  animation-name: logo-buzz;
+  -webkit-animation-duration: 0.15s;
+  animation-duration: 0.15s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
 }
 
 .menu a{
-  color: #fff;
+  color: black;
   text-transform: uppercase;
   text-decoration: none;
   padding: 0 10px;
@@ -46,7 +83,7 @@ header{
 .menu a:hover, 
 .show-menu:hover, 
 .hide-menu:hover{
-  color: #258750;
+  color: #a6c1c0;
 }
 
 #check{
@@ -61,15 +98,7 @@ header{
   height: 50vh;
   background-size: cover;
   background-position: center;
-}
-
-#selector::before{
-  content: '';
-  background: rgba(77, 77, 92, 0.6);
-  position: absolute;
-  width: 100%;
-  height: 50vhvh;
-  left: 0;
+  opacity: 85%;
 }
 
 .banner-container{
@@ -78,7 +107,7 @@ header{
 
 .banner-container{
   position: relative;
-  color: #fff;
+  color: black;
   width: 100%;
   height: 50vh;
   display: flex;
@@ -93,12 +122,12 @@ header{
 }
 
 .banner-container h2{
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 200;
   border-right: 4px solid;
-  width: 19ch;
+  width: 20ch;
   white-space: nowrap;
-  animation: typing 2s steps(19), blink .5s infinite step-end alternate;
+  animation: typing 2s steps(20), blink .5s infinite step-end alternate;
   overflow: hidden;
 }
 
@@ -113,7 +142,8 @@ from { width: 0}
 .about-me-button{
   text-decoration: none;
   border: 3px solid black;
-  color: #fff;
+  border-radius: 25%;
+  color: black;
   padding: 15px 10px;
   margin-right: 0px;
   align-self: baseline;
@@ -122,20 +152,18 @@ from { width: 0}
 }
 
 .about-me-button:hover{
-  background: #6cc091;
+  background: #a6c1c0;
 }
 
 /* AVATAR */
 
 #avatar{
-  padding: 15px 30px ;
+  padding: 20px 20px ;
   background: #d1dede;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: 100%;
   place-items: center;
-  column-gap: 2em;
-  row-gap: 2em;
+  gap: 2em
 
 }
 
@@ -145,21 +173,26 @@ from { width: 0}
 }
 
 #avatar p{
-  font-size: 25px;
+  font-size: 15px;
 }
 
 /* SKILLS */
 
 #skills{
-  background: #9590a8;
+  background: #fffafb;
   padding: 10px 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   place-items: center;
   row-gap: 2em;
   
 }
+
+.skills-title{
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .icon{
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
@@ -178,18 +211,79 @@ from { width: 0}
 /* PROJECTS */
 
 #projects{
+  padding: 10px 30px;
   background: #634b66;
-  height: 100px
 }
+
+.project-title{
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.projects-container{
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  place-items: center;
+}
+
+.project-image{
+  width: 250px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4)
+}
+
+.code-button, .demo-button{
+  padding: 2px 8px;
+  margin: 10px 0;
+  background-color: #634b66;
+  border: none;
+}
+
 
 
 /* CONTACT */
 
 #contact{
   background: #bfa992;
-  height: 100px
+  padding: 10px 0px
 }
 
+.form{
+  background-color: #fffafb;
+  width: 90%;
+  margin: auto;
+  max-width: 400px;
+  border-radius: 1em;
+}
+
+.form-container{
+  width: 100%;
+  display: grid;
+  gap: 2.5em;
+  grid-auto-columns: 100%;
+  padding: 10px 10px;
+}
+
+.form-title {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.form-input {
+  padding: 10px 5px;
+  outline: none;
+  border: 2px solid #bfa992;
+}
+
+.form-input--message{
+  resize: none;
+  padding: 10px 5px;
+}
+
+.form-button{
+  padding: 2px 0;
+  font-weight: 700;
+}
 
 
 /*RESPONSIVE*/
@@ -200,7 +294,7 @@ from { width: 0}
 
   .menu{
     position: fixed;
-    background: #4d4d5c;
+    background: #91746b;
     width: 100%;
     height: 100vh;
     right: -100%;
