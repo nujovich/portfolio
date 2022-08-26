@@ -169,7 +169,8 @@ from { width: 0}
   display: grid;
   grid-template-columns: 100%;
   place-items: center;
-  gap: 2em
+  gap: 2em;
+  transition: 0.4s
 
 }
 
