@@ -2,13 +2,15 @@
   "name": "portfolio-app",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "postcss:watch": "postcss src/styles/index.css --use postcss-import --dir public --watch"
   },
   "dependencies": {
+    "autoprefixer": "^10.4.8",
+    "bulma": "^0.9.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -16,6 +18,13 @@
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "@vitejs/plugin-react": "^2.0.1",
+    "postcss": "^8.4.16",
+    "postcss-cli": "^10.0.0",
+    "postcss-import": "^14.1.0",
+    "postcss-nested": "^5.0.6",
+    "postcss-nesting": "^10.1.10",
+    "postcss-sass": "^0.5.0",
+    "sass": "^1.54.5",
     "vite": "^3.0.7"
   }
 }
