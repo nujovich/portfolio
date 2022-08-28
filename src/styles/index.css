@@ -1,5 +1,5 @@
-@import "../../node_modules/bulma/sass/utilities/_all.sass";
-@import "../../node_modules/bulma/sass/elements/button.sass";
+/*@import "../../node_modules/bulma/sass/utilities/_all.sass";
+@import "../../node_modules/bulma/sass/elements/button.sass";*/
 
 /* RESET */
 
@@ -150,14 +150,19 @@ from { width: 0}
 
 .about-me-button{
   text-decoration: none;
-  border: 3px solid black;
-  border-radius: 25%;
+  text-transform: uppercase;
+  border: 5px solid black;
+  border-radius: 10%;
   color: black;
   padding: 15px 10px;
   margin-right: 0px;
   align-self: baseline;
   margin-top: 20px;
   transition: all 0.8s;
+}
+
+.download-icon{
+  vertical-align: middle;
 }
 
 .about-me-button:hover{
