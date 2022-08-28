@@ -13,6 +13,7 @@
 /* HEADER */
 
 header{
+  position: sticky;
   height: 100px;
   background: #91746b;
   padding: 0 50px;
@@ -151,8 +152,8 @@ from { width: 0}
 .about-me-button{
   text-decoration: none;
   text-transform: uppercase;
-  border: 5px solid black;
-  border-radius: 10%;
+  border: 2px solid black;
+  border-radius: 1%;
   color: black;
   padding: 15px 10px;
   margin-right: 0px;
@@ -166,6 +167,7 @@ from { width: 0}
 }
 
 .about-me-button:hover{
+  cursor: pointer;
   background: #a6c1c0;
 }
 
@@ -291,6 +293,7 @@ from { width: 0}
   padding: 10px 5px;
   outline: none;
   border: 2px solid #bfa992;
+  border-radius: 2%;
 }
 
 .form-input--message{
@@ -301,6 +304,17 @@ from { width: 0}
 .form-button{
   padding: 2px 0;
   font-weight: 700;
+}
+
+input[type=submit]{
+  text-transform: uppercase;
+  background: #fffafb;
+  border: 2px solid #bfa992;
+  border-radius: 2%;
+}
+
+input[type=submit]:hover{
+  background: #bfa992;
 }
 
 
@@ -316,7 +330,6 @@ from { width: 0}
     background: #91746b;
     width: 100%;
     height: 100vh;
-    right: -100%;
     top: 0;
     text-align: center;
     padding: 100px 0px;
@@ -336,9 +349,5 @@ from { width: 0}
     position: absolute;
     top: 40px;
     right: 40px;
-  }
-
-  #check:checked ~ .menu{
-    right: 0;
   }
 }
