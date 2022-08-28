@@ -1,12 +1,19 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 
 export function Header () {
 
   const[rightProp, setRightProp] = useState({right: "-100%"})
+  const[sticky, setPositionSticky] = useState(false)
 
+    useEffect(() => {
+      const handleScroll = () => {
+        setPositionSticky(window.scrollY >= 100)
+    }
+      window.addEventListener('scroll', handleScroll);
+    }, [])
     return (
-        <header>
+        <header className={sticky ? "header header-sticky" : "header"}>
         <img className="logo" src="/logo.svg" />
         <input type="checkbox" id="check" onClick={() => setRightProp({right: "0"})}/>
         <label htmlFor="check" className="show-menu">
