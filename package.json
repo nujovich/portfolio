@@ -2,16 +2,19 @@
   "name": "portfolio-app",
   "private": true,
   "version": "0.0.0",
+  "homepage": "http://nujovich.github.io/portfolio", 
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "deploy": "gh-pages -d build",
     "postcss:watch": "postcss src/styles/index.css --use postcss-import --dir public --watch"
   },
   "dependencies": {
     "autoprefixer": "^10.4.8",
     "bulma": "^0.9.4",
     "file-saver": "^2.0.5",
+    "gh-pages": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
