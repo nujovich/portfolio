@@ -6,7 +6,7 @@ export function Projects() {
         <div className="projects-container">
           <div className="project-container--project1">
             <h3>Lorem.</h3>
-            <img className="project-image" src="../assets/images/banner_3.jpg"/>
+            <img className="project-image" src="../portfolio/assets/images/banner_3.jpg"/>
             <div className="buttons">
               <button className="code-button" title="Browse GitHub Code">
                 <iconify-icon icon="fa-solid:code" width="40" height="40"></iconify-icon>
@@ -18,7 +18,7 @@ export function Projects() {
           </div>
           <div className="project-container--project2">
             <h3>Lorem.</h3>
-            <img className="project-image" src="../assets/images/banner_3.jpg"/>
+            <img className="project-image" src="../portfolio/assets/images/banner_3.jpg"/>
             <div className="buttons">
               <button className="code-button" title="Browse GitHub Code">
                 <iconify-icon icon="fa-solid:code" width="40" height="40"></iconify-icon>

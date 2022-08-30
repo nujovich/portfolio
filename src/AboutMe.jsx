@@ -2,7 +2,7 @@ import FileSaver from 'file-saver';
 
 
 const BASE_URL = import.meta.env.MODE === 'development' ? import.meta.env.LOCAL_URL : import.meta.env.PROD_URL
-const FILE_PATH = '/Nadia Ujovich Spanish CV Version v1.0.pdf'
+const FILE_PATH = import.meta.env.MODE === 'development' ? '/Nadia Ujovich Spanish CV Version v1.0.pdf' : '/portfolio/Nadia Ujovich Spanish CV Version v1.0.pdf'
 
 function downloadCV() {
 

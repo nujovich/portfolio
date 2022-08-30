@@ -14,7 +14,7 @@ export function Header () {
     }, [])
     return (
         <header className={sticky ? "header header-sticky" : "header"}>
-        <img className="logo" src="/logo.svg" />
+        <img className="logo" src="./logo.svg" />
         <input type="checkbox" id="check" onClick={() => rightProp['right'] === "0" 
         ? setRightProp({right: "-100%"}) : setRightProp({right: "0"})}/>
         <label htmlFor="check" className="show-menu">
