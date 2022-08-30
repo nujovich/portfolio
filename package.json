@@ -2,7 +2,7 @@
   "name": "portfolio-app",
   "private": true,
   "version": "0.0.0",
-  "homepage": "http://nujovich.github.io/portfolio", 
+  "homepage": "https://nujovich.github.io/portfolio", 
   "scripts": {
     "dev": "vite",
     "build": "vite build",
