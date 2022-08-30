@@ -1,10 +1,12 @@
 import FileSaver from 'file-saver';
 
+
+const BASE_URL = import.meta.env.MODE === 'development' ? import.meta.env.LOCAL_URL : import.meta.env.PROD_URL
+const FILE_PATH = '/Nadia Ujovich Spanish CV Version v1.0.pdf'
+
 function downloadCV() {
-    const base_url = import.meta.env.MODE === 'development' ? import.meta.env.BASE_URL : 'http://nujovich.github.io'
-    const file_path = import.meta.env.MODE === 'development' ? '/public/Nadia Ujovich Spanish CV Version v1.0.pdf' : '/portfolio/Nadia Ujovich Spanish CV Version v1.0.pdf'
-    FileSaver.saveAs(base_url + file_path,
-    "Nadia_Ujovich_CV_Spanish.pdf");
+
+    FileSaver.saveAs(BASE_URL + FILE_PATH, "Nadia_Ujovich_CV_Spanish.pdf");
 }
 
 export function AboutMe() {

@@ -7,7 +7,10 @@ export default defineConfig({
   base: '/portfolio/',
   plugins: [
     react(),
-    EnvironmentPlugin({ BASE_URL: 'http://localhost:5173' }, { defineOn: 'import.meta.env' })
+    EnvironmentPlugin(
+      { LOCAL_URL: 'http://localhost:5174' }, { defineOn: 'import.meta.env' },
+      { PROD_URL: 'http://nujovich.github.io/portfolio/' }, { defineOn: 'import.meta.env' },
+    )
   ],
   css: {
     postcss: {
