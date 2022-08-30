@@ -3,7 +3,6 @@ import FileSaver from 'file-saver';
 const FILE_PATH = 'Nadia Ujovich Spanish CV Version v1.0.pdf'
 
 function downloadCV() {
-    console.log(import.meta.env.BASE_URL + FILE_PATH)
     FileSaver.saveAs(import.meta.env.BASE_URL + FILE_PATH, "Nadia_Ujovich_CV_Spanish.pdf");
 }
 
