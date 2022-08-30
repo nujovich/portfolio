@@ -4,7 +4,6 @@ import postcssNesting from 'postcss-nested';
 import EnvironmentPlugin from 'vite-plugin-environment'
 
 export default defineConfig({
-  base: '/portfolio/',
   plugins: [
     react(),
     EnvironmentPlugin(
@@ -12,6 +11,7 @@ export default defineConfig({
       { PROD_URL: 'https://nujovich.github.io' }, { defineOn: 'import.meta.env' },
     )
   ],
+  base: '/portfolio/',
   css: {
     postcss: {
       plugins: [

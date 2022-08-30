@@ -15,7 +15,7 @@ cd dist
 git init
 git checkout -b main
 git add -A
-git commit -m 'deploy'
+git commit -m 'deploy a'
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
 git push -f git@github.com:nujovich/portfolio.git main:gh-pages
