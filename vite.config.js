@@ -9,7 +9,7 @@ export default defineConfig({
     react(),
     EnvironmentPlugin(
       { LOCAL_URL: 'http://localhost:5174' }, { defineOn: 'import.meta.env' },
-      { PROD_URL: 'http://nujovich.github.io/portfolio/' }, { defineOn: 'import.meta.env' },
+      { PROD_URL: 'http://nujovich.github.io' }, { defineOn: 'import.meta.env' },
     )
   ],
   css: {
