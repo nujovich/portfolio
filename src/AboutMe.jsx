@@ -1,7 +1,9 @@
 import FileSaver from 'file-saver';
 
 function downloadCV() {
-    FileSaver.saveAs(import.meta.env.BASE_URL + "/public/Nadia Ujovich Spanish CV Version v1.0.pdf",
+    const base_url = import.meta.env.MODE === 'development' ? import.meta.env.BASE_URL : 'http://nujovich.github.io'
+    const file_path = import.meta.env.MODE === 'development' ? '/public/Nadia Ujovich Spanish CV Version v1.0.pdf' : '/portfolio/Nadia Ujovich Spanish CV Version v1.0.pdf'
+    FileSaver.saveAs(base_url + file_path,
     "Nadia_Ujovich_CV_Spanish.pdf");
 }
 

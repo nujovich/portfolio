@@ -4,6 +4,7 @@ import postcssNesting from 'postcss-nested';
 import EnvironmentPlugin from 'vite-plugin-environment'
 
 export default defineConfig({
+  base: '/portfolio/',
   plugins: [
     react(),
     EnvironmentPlugin({ BASE_URL: 'http://localhost:5173' }, { defineOn: 'import.meta.env' })
