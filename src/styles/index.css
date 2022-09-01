@@ -137,18 +137,30 @@
   padding: 10px 0;
 }
 
+.banner-container h2::before{
+  content: "";
+  animation: blink 0.8s steps(2) infinite;
+}
+
 .banner-container h2{
+  font-family: consolas;
   font-size: 25px;
   font-weight: 200;
   border-right: 4px solid;
-  width: 20ch;
+  width: 18ch;
   white-space: nowrap;
-  animation: typing 2s steps(20), blink .5s infinite step-end alternate;
+  animation: typing 4s steps(18) infinite;
   overflow: hidden;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0002);
 }
 
 @keyframes typing{
-from { width: 0}
+  0% , 90%, 100%{ 
+    width: 0
+  }
+  30%, 60%{
+    width: 280.86px;
+  }
 }
 
 @keyframes blink{
@@ -166,6 +178,7 @@ from { width: 0}
   align-self: baseline;
   margin-top: 20px;
   transition: all 0.8s;
+  
 }
 
 .download-icon{
@@ -186,7 +199,8 @@ from { width: 0}
   grid-template-columns: 100%;
   place-items: center;
   gap: 2em;
-  transition: 0.4s
+  transition: 0.4s;
+  z-index: 1
 
 }
 
