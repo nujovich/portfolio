@@ -10,7 +10,10 @@ export function Header () {
       const handleScroll = () => {
         setPositionSticky(window.scrollY >= 100)
     }
-      window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
     }, [])
     return (
         <header className={sticky ? "header header-sticky" : "header"}>
@@ -26,10 +29,10 @@ export function Header () {
               <a href="#avatar" className="menu-link" onClick={() => setRightProp({right: "-100%"})}>Sobre mi</a>
             </li>
             <li>
-              <a href="#projects" className="menu-link" onClick={() => setRightProp({right: "-100%"})}>Proyectos</a>
+              <a href="#skills" className="menu-link" onClick={() => setRightProp({right: "-100%"})}>Skills</a>
             </li>
             <li>
-              <a href="#skills" className="menu-link" onClick={() => setRightProp({right: "-100%"})}>Skills</a>
+              <a href="#projects" className="menu-link" onClick={() => setRightProp({right: "-100%"})}>Proyectos</a>
             </li>
             <li>
               <a href="#contact" className="menu-link" onClick={() => setRightProp({right: "-100%"})}>Contacto</a>
