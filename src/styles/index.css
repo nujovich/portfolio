@@ -146,13 +146,13 @@
 }
 
 .banner-container h2{
-  font-family: consolas;
+  font-family: 'Courier New', Courier, monospace;
   font-size: 25px;
-  font-weight: 200;
+  font-weight: 800;
   border-right: 4px solid;
-  width: 18ch;
+  width: 22ch;
   white-space: nowrap;
-  animation: typing 4s steps(18) infinite;
+  animation: typing 4s steps(22) infinite;
   overflow: hidden;
   -webkit-box-reflect: below 1px linear-gradient(transparent, #0002);
 }
@@ -162,7 +162,7 @@
     width: 0
   }
   30%, 60%{
-    width: 280.86px;
+    width: 289.89px;
   }
 }
 
