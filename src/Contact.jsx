@@ -1,15 +1,21 @@
 export function Contact() {
     return (
         <section id="contact">
-            <form className="form" action="https://formspree.io/f/xnqrndee" method="POST">
-            <div className="form-container">
-                <h2 className="form-title">Contacto</h2>
-                <input type="text" className="form-input" placeholder="Nombre:" name="name" required/>
-                <input type="email" className="form-input" placeholder="Email:" name="email" required/>
-                <textarea className="form-input form-input--message" placeholder="Mensaje:" name="message" required></textarea>
-                <input type="submit" className="form-button"/>
+            <h2 className="title">Contacto</h2>
+            <div className="buttons-container">
+                <button type='button' className="contact-button" onClick={() =>window.location = 'https://wa.me/3413553238'}>
+                <span className='button-text'>WhatsApp</span>
+                    <span className='button-icon'>
+                    <iconify-icon icon="logos:whatsapp-icon"></iconify-icon>
+                    </span>
+                </button>
+                <button type='button' className="contact-button" onClick={() => window.location = 'mailto:nujovich@gmail.com'}>
+                <span className='button-text'>E-Mail</span>
+                    <span className='button-icon'>
+                    <iconify-icon icon="bx:envelope"></iconify-icon>
+                    </span>
+                </button>
             </div>
-            </form>
         </section>
     )
 }

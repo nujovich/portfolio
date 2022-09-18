@@ -13,9 +13,8 @@ export function AboutMe() {
                 <h3>Nadia Ivana Ujovich</h3>
                 <h2>Fullstack Developer</h2>
                 <button className="about-me-button" onClick={downloadCV}>
-                    <span>Descargar cv</span>
-                        &nbsp;
-                    <iconify-icon inline className="download-icon" icon="bx:download" width="20" height="20"></iconify-icon>
+                    <span className='button-text'>Descargar cv</span>
+                    <span className='button-icon'><iconify-icon inline className="download-icon" icon="bx:download" width="20" height="20"></iconify-icon></span>
                 </button>
             </div>
         </section>
